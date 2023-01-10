@@ -115,10 +115,10 @@ transition: color 250ms var(--cub);
 {display: flex;}
 
 
-
 .header-item{
     position: relative;
 }
+
 
 .header-list .header-link.current::after{
     position: absolute;
@@ -139,7 +139,27 @@ padding-top: 96px;
 padding-bottom: 120px;
 }
 
-.img-port::after{
+.port{
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top:100%;
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+    transition: 1400ms;
+
+}
+
+.hero-item:hover .overlay{
+    transform: translateY(-100%);
+}
+
+.img-port::before{
     display: inline-block;
     position: absolute;
     content:"";
