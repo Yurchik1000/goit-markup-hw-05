@@ -150,9 +150,18 @@ padding-bottom: 120px;
     top:100%;
     width: 100%;
     height: 100%;
-    background-color: #4D5AE5;
-    transition: 1400ms;
+    background-color: var(--primary-btn);
+    transition: 250ms;
 
+}
+
+.overlay-text{
+    padding: 40px 32px;
+    font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: #F4F4FD;
 }
 
 .hero-item:hover .overlay{
