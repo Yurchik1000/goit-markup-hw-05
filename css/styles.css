@@ -86,29 +86,30 @@ margin-right: 76px;
 .header-link {
 font-weight: 600;
 color: var(--primary-color);
+transition: color 250ms var(--cub);
 }
+
 .header-link:hover,
 .header-link:focus{
 color: var(--primary-btn);
-transition: color 250ms var(--cub);
 }
 
 .header-mail {
 color: var(--secondary-color);
+transition: color 250ms var(--cub);
 }
 .header-tel {
 color: var(--secondary-color);
+transition: color 250ms var(--cub);
 }
 
 .header-mail:hover,
 .header-mail:focus {
 color: var(--primary-btn);
-transition: color 250ms var(--cub);
 }
 .header-tel:hover,
 .header-tel:focus {
 color: var(--primary-btn);
-transition: color 250ms var(--cub);
 }
 
 .header-navigation
@@ -123,7 +124,7 @@ transition: color 250ms var(--cub);
 .header-list .header-link.current::after{
     position: absolute;
     left: 0;
-    bottom: -25px;
+    bottom: -24px;
     content: "";    
     display: block;
     width: 100%;
@@ -151,7 +152,7 @@ padding-bottom: 120px;
     width: 100%;
     height: 100%;
     background-color: var(--primary-btn);
-    transition: 250ms;
+    transition-duration: 250ms;
 
 }
 
@@ -168,16 +169,6 @@ color: #F4F4FD;
     transform: translateY(-100%);
 }
 
-.img-port::before{
-    display: inline-block;
-    position: absolute;
-    content:"";
-    width: 50px;
-    height: 50px;
-    color: #000000;
-}
-
-.img-port {display: block;}
 
 .hero-index{
 max-width: 1440px;
@@ -218,13 +209,16 @@ gap: 24px;
 width: 264px;
 }
 
+.hero-item {
+transition: box-shadow 250ms var(--cub);
+}
+
 .hero-item:hover,
 .hero-item:focus{
 box-shadow: 
 0px 1px 6px rgba(46, 47, 66, 0.08),
 0px 1px 1px rgba(46, 47, 66, 0.16), 
 0px 2px 1px rgba(46, 47, 66, 0.08);
-transition: box-shadow 250ms var(--cub);
 }
 
 .hero-list-port
@@ -269,6 +263,10 @@ background-color: #F4F4FD;
 border-radius: 4px;
 border: 1px solid #E7E9FC;
 padding: 12px 24px;
+transition: 
+background-color 250ms var(--cub),
+box-shadow 250ms var(--cub),
+color 250ms var(--cub);
 }
 
 .hero-index-btn{
@@ -287,6 +285,9 @@ margin: auto;
 display: block;
 margin-top: 48px;
 border-color: transparent;
+transition: 
+background-color 250ms var(--cub),
+box-shadow 250ms var(--cub);
 }
 
 .hero-index-btn:hover,
@@ -296,9 +297,6 @@ box-shadow:
 0px 1px 1px rgba(46, 47, 66, 0.16), 
 0px 2px 1px rgba(46, 47, 66, 0.08); 
 background-color: #404BBF;
-transition: 
-background-color 250ms var(--cub),
-box-shadow 250ms var(--cub);
 }
 
 .hero-btn:hover,
@@ -309,10 +307,6 @@ box-shadow:
 0px 3px 1px rgba(0, 0, 0, 0.1),
 0px 2px 1px rgba(0, 0, 0, 0.08),
 0px 2px 2px rgba(0, 0, 0, 0.12);
-transition: 
-background-color 250ms var(--cub),
-box-shadow 250ms var(--cub),
-color 250ms var(--cub);
 }
 
 .hero-headline {
@@ -427,12 +421,13 @@ border-radius: 50%;
 display: flex;
 align-items: center;
 justify-content: center;
+transition: 
+background-color 250ms var(--cub);
 }
 
 .our-soc-link:hover,
 .our-soc-link:focus {
 background-color: #404BBF;
-transition: background-color 250ms var(--cub);
 }
 
 /* -----customers----- */
@@ -468,25 +463,25 @@ border-radius: 4px;
 display: flex;
 align-items: center;
 justify-content: center;
+transition: 
+border-color 250ms var(--cub),
 }
 
 .customers-icon{
 fill: #8e8f99;
+transition: fill 1250ms var(--cub);
 }
 
 .customers-link:hover,
 .customers-link:focus {
 border-color:var(--primary-btn);
-transition: border-color 250ms var(--cub);
 }
 
 .customers-link:hover .customers-icon{
 fill:var(--primary-btn);
-transition: fill 250ms var(--cub);
 }
 .customers-link:focus .customers-icon{
 fill:var(--primary-btn);
-transition: fill 250ms var(--cub);
 }
 
 /* -----footer----- */
@@ -551,9 +546,30 @@ border-radius: 50%;
 display: flex;
 align-items: center;
 justify-content: center;
+transition: 
+background-color 250ms var(--cub);
 }
+
 .social-link:hover,
 .social-link:focus {
 background-color: #31D0AA;
-transition: background-color 250ms var(--cub);
+}
+
+.backdrop{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(46, 47, 66, 0.4);
+}
+
+.modal {
+    width: 408px;
+    min-height: 576px;
+    background-color: #FCFCFC;
+    box-shadow: 
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 }
