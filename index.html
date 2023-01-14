@@ -39,7 +39,7 @@
         <section class="hero-index">
             <div class="container">
                 <h1 class="hero-main">Effective Solutions for Your Business</h1>
-                <button class="hero-index-btn" type="button">Order Service</button>
+                <button class="hero-index-btn" type="button" data-modal-open>Order Service</button>
             </div>
         </section>
         <!--Our goal-->
@@ -318,10 +318,10 @@
             </div>
         </div>
     </footer>
-    <div class="backdrop">
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button type="button" class="modal-close">
-                <svg class="close">
+            <button type="button" class="modal-close" data-modal-close>
+                <svg class="close" width="8" height="8">
                 <use xlink:href="./images/icons.svg#icon-close"></use>
                 </svg>
             </button>
